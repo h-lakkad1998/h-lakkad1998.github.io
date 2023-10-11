@@ -429,16 +429,13 @@
             </div>
         </div>
     </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" ></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js" ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js" ></script>
     <script>
-        $(document).ready(function () {
-            $("html,body").addClass("overflow");
+       document.addEventListener("DOMContentLoaded", () => {
+            document.body.classList.toggle('overflow');
             setTimeout(() => {
-                $("html,body").removeClass("overflow");
+                document.body.classList.toggle('overflow');
             }, 2500);
 
             gsap.registerPlugin(ScrollTrigger);
